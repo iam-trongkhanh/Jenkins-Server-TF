@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and replace placeholders explicitly.
+
+aws_region              = "__________ (AWS region, e.g., ap-southeast-1)"
+project                 = "__________ (project name for tagging)"
+environment             = "__________ (environment, e.g., dev|staging|prod)"
+owner                   = "__________ (owner or team email/slug)"
+vpc_cidr                = "__________ (VPC CIDR, e.g., 10.10.0.0/16)"
+public_subnet_cidrs     = ["__________ (public subnet CIDR a)", "__________ (public subnet CIDR b)"]
+private_subnet_cidrs    = ["__________ (private subnet CIDR a)", "__________ (private subnet CIDR b)"]
+availability_zones      = ["__________ (AZ for subnet a)", "__________ (AZ for subnet b)"]
+allowed_ssh_cidr        = "__________ (office/bastion/VPN CIDR only)"
+jenkins_ui_cidrs        = [] # keep empty unless explicitly approved
+jenkins_ui_source_security_group_ids = [] # add ALB/bastion SG IDs if used
+jenkins_instance_type   = "__________ (e.g., t3.medium or m6i.large)"
+jenkins_ami_id          = "__________ (AMI ID for Amazon Linux 2/2023)"
+jenkins_root_volume_size = __________ (root volume size in GB, e.g., 100)
+jenkins_key_name        = "__________ (SSH key pair name for break-glass access)"
+eks_cluster_arns        = ["__________ (EKS cluster ARN if needed)"]
+artifact_bucket_arns    = ["__________ (artifact bucket ARN if needed)"]
+jenkins_additional_iam_policy_arns = []
+
